@@ -1,0 +1,153 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+:root{
+    --main-color:#05a081;
+    --text-color:#fff;
+    --bg-1:#eee;
+    --bg-2:#333;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Raleway';
+    font-size: 20px !important;
+}
+
+header{
+    width: 100%;
+    position:absolute;
+    z-index: 5;
+}
+header nav{
+    background: transparent !important;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+nav ul li{
+    flex:1;
+}
+nav a{
+    text-decoration: none;
+    color:var(--text-color);
+    display: block;
+    padding:1em;
+    text-align: center;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+nav a:hover{
+    opacity: 1;
+    color: var( --main-color);
+}
+a:hover{
+    text-decoration: none !important;
+    color: var(--text-color);
+}
+.banner{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+main{
+    padding: 4em 0;
+    background-color: var(--background-color);
+}
+.main-container{
+    display: flex;
+}
+
+.floatleft{
+    flex: 1;
+    padding:1em;
+}
+.floatright{
+    flex: 2;
+    padding:1em;
+}
+.box-container{
+    display: flex;
+}
+.box{
+    text-align: center;
+    padding: 2em 0;
+    margin: 1em;
+}
+.section-color{
+    color:var(--text-color);
+    background-color: var(--bg-2);
+    overflow: hidden;
+}
+.fas{
+    font-size: 3em;
+    padding: 0.5em;
+}
+.button{
+    background-color: var(--main-color);
+    color:var(--text-color);
+    padding: 0.5em 1em;
+    border-radius: 4px;   
+}
+
+footer{
+    width: 100%;
+    padding: 2.6em;
+    text-align: center;
+}
+.label, #toggle{
+    display: none;
+}
+
+@media(max-width:760px){
+   nav ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    display: none;
+    width: 80%;
+    top:3em;
+    background: rgba(0, 0, 0, 0.5);  
+   }
+   .icon:checked+.menu{
+       display: block;
+   }
+   .fa-bars{
+       font-size: 26px;
+       color: var(--text-color);
+       float: right;
+       width:30px;
+   }
+   .label{
+       display: block;
+       cursor: pointer;
+   }
+   .main-container{
+       display: flex;
+       flex-direction: column;  
+   }
+   .box-container{
+       display: flex;
+       flex-direction: column;
+   }
+   .box{
+    padding:0;
+    margin:0;
+   }
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.cards img{
+    max-width: 20vw;
+    margin:10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.34), 0 2px 4px rgba(0,0,0,0.2);   
+}
